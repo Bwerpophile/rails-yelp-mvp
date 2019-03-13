@@ -1,0 +1,22 @@
+  <h1 class="text-center">Our Restaurants</h1>
+    <div class="container">
+      <div class="row justify-content-start">
+      <div class="col-md-12">
+        <div class="card mb-6 box-shadow">
+          <div class="card-body">
+          <% @restaurants.each do |restaurant| %>
+
+              <h2><%= restaurant.name %></h2>
+              <%= restaurant.address %><%= restaurant.phone_number %></li>
+                <%= link_to "Show", restaurant_path(restaurant), class: 'btn btn-primary' %>
+              </ul>
+          <% end %>
+        </div>
+          </div>
+        </div>
+      </div>
+    </div>
+<div class="new" style="margin-left: 48%;">
+  <%= link_to "new", new_restaurant_path, class: 'btn btn-primary' %>
+</div>
+</div>

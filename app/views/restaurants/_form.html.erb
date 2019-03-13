@@ -1,0 +1,14 @@
+<%= simple_form_for(restaurant) do |f| %>
+  <div class="form-inputs">
+    <%= f.input :name %>
+    <%= f.input :address %>
+    <%= f.input :phone_number %>
+    <%= f.input :category %>
+    <%= f.submit %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, 'Save', class: 'btn btn-primary' %>
+    <%= link_to 'Cancel', (restaurant.new_record? ? restaurants_path : restaurant_path(restaurant)), class: 'btn btn-link' %>
+  </div>
+<% end %>
